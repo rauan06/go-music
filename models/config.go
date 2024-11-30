@@ -1,6 +1,9 @@
 package models
 
-import "log/slog"
+import (
+	"fmt"
+	"log/slog"
+)
 
 type Config struct {
 	Help     bool
@@ -10,4 +13,8 @@ type Config struct {
 	Username string `env:"USERNAME"` // os.Getenv("USERNAME")
 	Email    string `env:"EMAIL"`    // os.Getenv("EMAIL")
 	Pass     string `env:"PASSWORD"` // os.Getenv("PASSWORD")
+}
+
+func (c *Config) GetAddr() string {
+	return fmt.Sprintf("0.0.0.0%d", c.Port)
 }
