@@ -1,0 +1,13 @@
+services:
+  own-redis:
+    container_name: go-music
+    image: "go-music-server:v1.0"
+    restart: always
+    networks:
+      - monitoring
+    ports:
+      - "8000:8000/tcp"
+
+networks:
+  monitoring:
+    driver: bridge
