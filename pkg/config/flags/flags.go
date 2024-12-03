@@ -41,11 +41,11 @@ func validateConfig(config *models.Config) error {
 }
 
 func printUsage() {
-	fmt.Println(`Zip Files Management System
+	fmt.Println(`Go music website
 
 Usage:
-  doodocs-zip [--port <N>] [--env <S>]
-  doodocs-zip --help
+  ./go-music [--port <N>] [--env <S>]
+  ./go-music --help
 
 Options:
   --help       Show this screen.
